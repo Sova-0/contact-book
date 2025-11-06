@@ -25,7 +25,7 @@ export const ContactsList = () => {
 
             {contacts.map((contact) => (
                 <Card key={contact.id} style={{ width: "18rem" }}>
-                    <Card.Body>
+                    <Card.Body className="d-flex flex-column">
                         <Card.Title className="text-capitalize">{contact.type}</Card.Title>
                         <Card.Text>
                             <strong>Значение:</strong> {contact.value}
@@ -37,7 +37,7 @@ export const ContactsList = () => {
                             )}
                         </Card.Text>
 
-                        <ButtonGroup className="w-100">
+                        <ButtonGroup className="w-100 mt-auto mb-1">
                             <Button variant="outline-danger" onClick={() => handleDelete(contact.id)}>
                                 Удалить
                             </Button>
